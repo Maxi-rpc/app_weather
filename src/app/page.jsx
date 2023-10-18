@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 // project
 import { get_data } from "@/services/api";
-import { Header, CardHeader, CardMain, Loading } from "@/components";
+import { Header, CardHeader, CardMain, Loading, Divider } from "@/components";
 // assets
 import icon_sol from "@/public/icons/icon_sol.svg";
 import icon_sol_nublado from "@/public/icons/icon_sol_nublado.svg";
@@ -68,20 +68,18 @@ export default function Home() {
 				<Header>
 					App weather with <span className="font-bold">Next JS</span>
 				</Header>
-				<div className="my-5"></div>
+				<Divider />
 				{/* insert city */}
 				<div className="w-full">
-					<div className="w-1/2">
-						
-					</div>
+					<div className="w-1/2"></div>
 				</div>
-				<div className="my-5"></div>
+				<Divider />
 				{/* card */}
 				<div className="w-full">
 					<CardMain>
 						{/* column */}
 						<div className="w-1/2">
-							<div className="flex flex-col space-y-4 text-center">
+							<div className="h-full grid grid-cols-1 content-center text-center space-y-4">
 								<h2 className="text-xl font-bold">
 									{city}, {country}
 								</h2>
@@ -94,15 +92,13 @@ export default function Home() {
 						</div>
 						{/* column */}
 						<div className="w-1/2">
-							<div className="flex flex-col">
-								<div className="mx-auto">
-									<Image
-										src={icons[weather.main]}
-										width={150}
-										height={150}
-										alt={icons[weather.main]}
-									/>
-								</div>
+							<div className="h-full grid grid-cols-1 justify-items-center content-center">
+								<Image
+									src={icons[weather.main]}
+									width={200}
+									height={200}
+									alt={icons[weather.main]}
+								/>
 							</div>
 						</div>
 					</CardMain>
