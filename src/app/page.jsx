@@ -3,7 +3,15 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 // project
 import { get_data } from "@/services/api";
-import { Header, CardHeader, CardMain, Loading, Divider } from "@/components";
+import {
+	Header,
+	CardHeader,
+	CardMain,
+	Loading,
+	Divider,
+	AlertMain,
+	AlertNotify,
+} from "@/components";
 // assets
 import icon_sol from "@/public/icons/icon_sol.svg";
 import icon_sol_nublado from "@/public/icons/icon_sol_nublado.svg";
@@ -37,6 +45,11 @@ export default function Home() {
 	});
 	const [newCountry, setNewCountry] = useState("");
 	const [newProvince, setNewProvince] = useState("");
+	const [showAlert, setShowAlert] = useState({
+		isOpen: false,
+		title: "",
+		message: "",
+	});
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -59,7 +72,8 @@ export default function Home() {
 				});
 			})
 			.catch((err) => {
-				console.log(err.message);
+				const title = err.name + " " + err.code;
+				setShowAlert({ isOpen: true, title: title, message: err.message });
 			});
 	};
 
@@ -81,7 +95,8 @@ export default function Home() {
 				});
 			})
 			.catch((err) => {
-				console.log(err.message);
+				const title = err.name + " " + err.code;
+				setShowAlert({ isOpen: true, title: title, message: err.message });
 			});
 	}, [country, province]);
 
@@ -180,6 +195,15 @@ export default function Home() {
 							</div>
 						</div>
 					</CardMain>
+				</div>
+				{/* alert */}
+				<div className="w-full">
+					<AlertNotify
+						open={showAlert.isOpen}
+						setOpen={setShowAlert}
+						title={showAlert.title}
+						message={showAlert.message}
+					></AlertNotify>
 				</div>
 			</div>
 		</main>
