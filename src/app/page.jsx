@@ -118,7 +118,7 @@ export default function Home() {
 					App weather with <span className="font-bold">Next JS</span>
 				</Header>
 				<Divider />
-				{/* insert city */}
+				{/* forms */}
 				<div className="w-full">
 					<CardMain>
 						<form className="flex justify-center space-x-6 w-full">
