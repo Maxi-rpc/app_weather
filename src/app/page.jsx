@@ -75,7 +75,7 @@ export default function Home() {
 				});
 			})
 			.catch((err) => {
-				const title = err.name + " " + err.code;
+				const title = "get_data ->" + err.name + " " + err.code;
 				setShowAlert({ isOpen: true, title: title, message: err.message });
 			});
 	}, [country, province]);
@@ -83,8 +83,10 @@ export default function Home() {
 	if (!temp.temperature) {
 		return (
 			<>
-				<div className="w-full p-5 flex justify-center">
-					<Loading />
+				<div className="w-full h-5/6 flex justify-center">
+					<div className="my-auto">
+						<Loading />
+					</div>
 				</div>
 			</>
 		);
