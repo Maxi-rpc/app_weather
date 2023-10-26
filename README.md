@@ -1,5 +1,5 @@
 [![version](https://img.shields.io/badge/version-1.0.0-blue)]()
-[![web](https://img.shields.io/badge/live-web-blue)](https://maxi-rpc.github.io/app_weather/){:target="_blank"}
+[![web](https://img.shields.io/badge/live-web-blue)](https://maxi-rpc.github.io/app_weather/){target="_blank"}
 
 # App Weather - Next JS
 
