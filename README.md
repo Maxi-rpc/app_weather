@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/version-1.0.0-blue)]()
+[![version](https://img.shields.io/badge/version-1.1.0-blue)]()
 [![web](https://img.shields.io/badge/live-web-blue)](https://maxi-rpc.github.io/app_weather/)
 
 # App Weather - Next JS
