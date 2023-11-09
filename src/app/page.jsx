@@ -93,7 +93,7 @@ export default function Home() {
 	}
 
 	return (
-		<main className="w-1/2 xxs:w-full lg:w-1/2 mx-auto">
+		<main className="w-1/2 xs:w-full lg:w-1/2 mx-auto">
 			<div className="flex flex-col p-5 justify-center">
 				{/* header */}
 				<Header>
