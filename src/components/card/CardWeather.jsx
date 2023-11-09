@@ -31,23 +31,30 @@ export const CardWeather = ({
 		<>
 			<div className="w-full">
 				<CardMain>
-					{/* column */}
-					<div className="w-1/2">
-						<div className="h-full grid grid-cols-1 content-center text-center space-y-4">
-							<h2 className="text-xl font-bold">
-								{province}, {country}
-							</h2>
-							<h3 className="text-5xl">{temperature} °C</h3>
-							<h4 className="text-base">
-								Max: {temp_max}° / Min: {temp_min}°
-							</h4>
-							<h5 className="text-base capitalize">{description}</h5>
+					<div className="xs:flex xs:flex-col-reverse xs:justify-center  sm:w-full sm:flex sm:flex-row sm:justify-between">
+						{/* column */}
+						<div className="xs:w-full sm:w-1/2">
+							<div className="h-full grid grid-cols-1 content-center text-center space-y-4">
+								<h2 className="text-xl font-bold">
+									{province}, {country}
+								</h2>
+								<h3 className="text-5xl">{temperature} °C</h3>
+								<h4 className="text-base">
+									Max: {temp_max}° / Min: {temp_min}°
+								</h4>
+								<h5 className="text-base capitalize">{description}</h5>
+							</div>
 						</div>
-					</div>
-					{/* column */}
-					<div className="w-1/2">
-						<div className="h-full grid grid-cols-1 justify-items-center content-center">
-							<Image src={icons[image]} width={200} height={200} alt={image} />
+						{/* column */}
+						<div className="xs:w-full sm:w-1/2">
+							<div className="h-full grid grid-cols-1 justify-items-center content-center">
+								<Image
+									src={icons[image]}
+									width={200}
+									height={200}
+									alt={image}
+								/>
+							</div>
 						</div>
 					</div>
 				</CardMain>
