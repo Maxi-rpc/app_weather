@@ -36,7 +36,7 @@ export const Footer = () => {
 	return (
 		<>
 			<div className="w-full p-5 flex justify-center">
-				<div className="w-6/12">
+				<div className="xs:w-full sm:w-6/12">
 					<div className="w-full text-center font-light">
 						<p>Todos los derechos reservados. Dev - Maxi-rpc</p>
 					</div>

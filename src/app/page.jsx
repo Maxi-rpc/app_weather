@@ -117,7 +117,7 @@ export default function Home() {
 					description={weather.description}
 				/>
 				{/* footer */}
-				<Footer></Footer>
+				<Footer />
 				{/* alert */}
 				<div className="w-full">
 					<AlertNotify
