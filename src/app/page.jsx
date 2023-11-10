@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { get_data } from "@/services/api";
 import {
 	Header,
+	Footer,
 	CardWeather,
 	Loading,
 	Divider,
@@ -115,6 +116,8 @@ export default function Home() {
 					temp_max={temp.temp_max}
 					description={weather.description}
 				/>
+				{/* footer */}
+				<Footer />
 				{/* alert */}
 				<div className="w-full">
 					<AlertNotify
